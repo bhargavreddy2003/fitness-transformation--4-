@@ -53,7 +53,7 @@ export default function TrainerProfile() {
   }, [controls, inView])
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans">
+    <div className="min-h-screen bg-background text-foreground font-sans relative">
       {/* Hero / About Section */}
       <motion.section
         ref={heroRef}
@@ -73,6 +73,20 @@ export default function TrainerProfile() {
           className="absolute inset-0 z-0"
         />
         <div className="absolute inset-0 bg-black/60 z-10"></div> {/* Dark overlay */}
+
+        {/* Top right Apply Button */}
+        <motion.a
+          href={trainerData.applyFormLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2 }}
+          className="absolute top-8 right-8 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition-transform duration-300 hover:-rotate-3 z-20 text-lg"
+        >
+          Apply to Transform
+        </motion.a>
+
         <div className="relative z-20 text-center p-8 bg-black/70 rounded-lg shadow-lg border border-primary/30 backdrop-blur-sm">
           <h1 className="text-5xl md:text-7xl font-bold text-primary mb-4 text-balance">{trainerData.trainerName}</h1>
           <p className="text-2xl md:text-3xl text-white/90 text-pretty">{trainerData.specialization}</p>
@@ -284,6 +298,22 @@ export default function TrainerProfile() {
           </motion.div>
         </div>
       </section>
+
+      {/* Bottom Apply Button */}
+      <div className="text-center py-12">
+        <motion.a
+          href={trainerData.applyFormLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8 }}
+          className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-2xl px-10 py-5 rounded-xl shadow-lg transition-transform duration-300 hover:rotate-3"
+        >
+          Apply to Transform
+        </motion.a>
+      </div>
 
       <footer className="py-8 bg-secondary/30 text-center text-white/60 text-sm">
         <div className="container mx-auto px-4">
