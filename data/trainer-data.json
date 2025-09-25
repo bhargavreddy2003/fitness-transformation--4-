@@ -25,5 +25,6 @@
     { "label": "Average Rating", "value": 4.5, "unit": "/5" }
   ],
   "instagramLink": "https://www.instagram.com/n_fitness9",
-  "gmailLink": "mailto:johndoe.fitness@example.com"
+  "gmailLink": "mailto:johndoe.fitness@example.com",
+  "applyFormLink": "https://docs.google.com/forms/d/e/1FAIpQLSfg8TvLj2J5PVgJKxKEM5XBLmgy0zCk4mfyVwRe5Kl2IyD8xC/viewform?usp=sharing"
 }
