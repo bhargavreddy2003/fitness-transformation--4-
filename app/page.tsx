@@ -72,7 +72,7 @@ export default function TrainerProfile() {
           objectFit="cover"
           className="absolute inset-0 z-0"
         />
-        <div className="absolute inset-0 bg-black/60 z-10"></div> {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
 
         {/* Top right Apply Button */}
         <motion.a
@@ -211,8 +211,7 @@ export default function TrainerProfile() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="mt-4 mb-12 text-xl text-center text-white/70 max-w-3xl mx-auto text-pretty"
           >
-            I'm proud of the results my clients achieve. Here's a look at some key metrics that highlight the impact of
-            personalized training.
+            I'm proud of the results my clients achieve. Here's a look at some key metrics that highlight the impact of personalized training.
           </motion.p>
           <div className="grid md:grid-cols-3 gap-8">
             {trainerData.stats.map((stat, index) => (
@@ -234,65 +233,7 @@ export default function TrainerProfile() {
         </div>
       </section>
 
-      {/* Portfolio + Contact Section */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Portfolio */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.8 }}
-              className="text-center md:text-left"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">My Portfolio</h2>
-              <motion.a
-                href={trainerData.instagramLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6 }}
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-primary/80 transition-colors duration-300 cursor-pointer group"
-              >
-                <FaInstagram className="mr-3 text-3xl group-hover:scale-110 transition-transform duration-300" />
-                View My Instagram
-              </motion.a>
-            </motion.div>
-
-            {/* Get In Touch */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-center md:text-left"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">Get In Touch</h2>
-              <div className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 justify-center md:justify-start">
-                <a
-                  href={trainerData.instagramLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-primary transition-colors duration-300 cursor-pointer"
-                >
-                  <FaInstagram className="text-6xl hover:scale-110 transition-transform duration-300" />
-                </a>
-                <a
-                  href={trainerData.gmailLink}
-                  className="text-white hover:text-primary transition-colors duration-300 cursor-pointer"
-                >
-                  <FaEnvelope className="text-6xl hover:scale-110 transition-transform duration-300" />
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Apply Section */}
+      {/* Ready to Transform Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 text-center">
           <motion.h2
@@ -325,6 +266,43 @@ export default function TrainerProfile() {
           >
             Apply to Transform
           </motion.a>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-5xl font-bold text-primary mb-12"
+          >
+            Get In Touch
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex justify-center gap-16"
+          >
+            <a
+              href={trainerData.instagramLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary transition-colors duration-300 cursor-pointer"
+            >
+              <FaInstagram className="text-6xl hover:scale-110 transition-transform duration-300" />
+            </a>
+            <a
+              href={trainerData.gmailLink}
+              className="text-white hover:text-primary transition-colors duration-300 cursor-pointer"
+            >
+              <FaEnvelope className="text-6xl hover:scale-110 transition-transform duration-300" />
+            </a>
+          </motion.div>
         </div>
       </section>
 
