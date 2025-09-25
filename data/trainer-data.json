@@ -1,0 +1,29 @@
+{
+  "trainerName": "NAVEEN KOPPOLU",
+  "specialization": "Strength & Conditioning Coach",
+  "aboutText": "With over 10 years of experience, I help individuals achieve their fitness goals through personalized training programs and dedicated support. My approach focuses on building sustainable habits and maximizing performance.",
+  "prs": [
+    { "exercise": "Deadlift", "weight": "270 kgs" },
+    { "exercise": "Squat", "weight": "180 kgs" },
+    { "exercise": "Bench Press", "weight": "170 kgs" }
+  ],
+  "benefits": [
+    "Personalized training plans tailored to your goals.",
+    "Expert guidance on proper form and technique.",
+    "Motivation and accountability to keep you on track.",
+    "Sustainable results that last a lifetime."
+  ],
+  "services": [
+    "Muscle Gain Programs",
+    "Weight Loss Coaching",
+    "Strength & Conditioning",
+    "Online Fitness Programs",
+    "Nutritional Guidance"
+  ],
+  "stats": [
+    { "label": "Total Clients Trained", "value": 50, "unit": "+" },
+    { "label": "Average Rating", "value": 4.5, "unit": "/5" }
+  ],
+  "instagramLink": "https://www.instagram.com/n_fitness9",
+  "gmailLink": "mailto:johndoe.fitness@example.com"
+}
