@@ -82,7 +82,7 @@ export default function TrainerProfile() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
-          className="absolute top-8 right-8 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition-transform duration-300 hover:-rotate-3 z-20 text-lg"
+          className="absolute top-8 right-8 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition-transform duration-300 hover:-rotate-3 z-20 text-lg cursor-pointer"
         >
           Apply to Transform
         </motion.a>
@@ -234,7 +234,65 @@ export default function TrainerProfile() {
         </div>
       </section>
 
-      {/* Portfolio / Instagram Section */}
+      {/* Portfolio + Contact Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Portfolio */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.8 }}
+              className="text-center md:text-left"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">My Portfolio</h2>
+              <motion.a
+                href={trainerData.instagramLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6 }}
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-primary/80 transition-colors duration-300 cursor-pointer group"
+              >
+                <FaInstagram className="mr-3 text-3xl group-hover:scale-110 transition-transform duration-300" />
+                View My Instagram
+              </motion.a>
+            </motion.div>
+
+            {/* Get In Touch */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-center md:text-left"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">Get In Touch</h2>
+              <div className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 justify-center md:justify-start">
+                <a
+                  href={trainerData.instagramLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-primary transition-colors duration-300 cursor-pointer"
+                >
+                  <FaInstagram className="text-6xl hover:scale-110 transition-transform duration-300" />
+                </a>
+                <a
+                  href={trainerData.gmailLink}
+                  className="text-white hover:text-primary transition-colors duration-300 cursor-pointer"
+                >
+                  <FaEnvelope className="text-6xl hover:scale-110 transition-transform duration-300" />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Apply Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 text-center">
           <motion.h2
@@ -242,78 +300,33 @@ export default function TrainerProfile() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold text-center text-primary mb-12"
+            className="text-4xl md:text-5xl font-bold text-primary mb-6"
           >
-            My Portfolio
+            Ready to Transform?
           </motion.h2>
-          <motion.a
-            href={trainerData.instagramLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-primary/80 transition-colors duration-300 group"
-          >
-            <FaInstagram className="mr-3 text-3xl group-hover:scale-110 transition-transform duration-300" />
-            View My Instagram
-          </motion.a>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-          <div className="w-full h-full bg-[url('/subtle-paper-texture.jpg')] bg-repeat opacity-5"></div>
-        </div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.h2
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold text-center text-primary mb-12"
-          >
-            Get In Touch
-          </motion.h2>
-          <motion.div
+          <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center space-x-8"
+            className="text-xl text-white/70 mb-8 max-w-3xl mx-auto"
           >
-            <a
-              href={trainerData.instagramLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-primary transition-colors duration-300"
-            >
-              <FaInstagram className="text-6xl hover:scale-110 transition-transform duration-300" />
-            </a>
-            <a href={trainerData.gmailLink} className="text-white hover:text-primary transition-colors duration-300">
-              <FaEnvelope className="text-6xl hover:scale-110 transition-transform duration-300" />
-            </a>
-          </motion.div>
+            Take the first step towards achieving your fitness goals. Apply now for a personalized training program and guidance from me.
+          </motion.p>
+          <motion.a
+            href={trainerData.applyFormLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-2xl px-10 py-5 rounded-xl shadow-lg transition-transform duration-300 hover:-rotate-3 cursor-pointer"
+          >
+            Apply to Transform
+          </motion.a>
         </div>
       </section>
-
-      {/* Bottom Apply Button */}
-      <div className="text-center py-12">
-        <motion.a
-          href={trainerData.applyFormLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8 }}
-          className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-2xl px-10 py-5 rounded-xl shadow-lg transition-transform duration-300 hover:rotate-3"
-        >
-          Apply to Transform
-        </motion.a>
-      </div>
 
       <footer className="py-8 bg-secondary/30 text-center text-white/60 text-sm">
         <div className="container mx-auto px-4">
